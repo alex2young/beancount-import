@@ -30,6 +30,7 @@
     "react": "^16",
     "react-autocomplete": "^1.8.1",
     "react-dom": "^16",
+    "react-is": "^17.0.2",
     "react-measure": "^2.5.2",
     "react-tabs": "^3.2.1",
     "scroll-into-view-if-needed": "^2.2.27",
