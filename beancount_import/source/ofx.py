@@ -420,6 +420,7 @@ import os
 import collections
 import datetime
 import tempfile
+import logging
 
 import bs4
 from atomicwrites import atomic_write
@@ -916,7 +917,8 @@ class ParsedOfxStatement(object):
                         continue
 
                 if raw.trantype == 'INVBANKTRAN' and raw.trntype == 'DEBIT':
-                    assert total < ZERO
+                    logging.warning('total < ZERO assertion failed', extra={'raw': raw})
+                    #assert total < ZERO
 
                 # Negate total for the cash posting created later.
                 total = -total
